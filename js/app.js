@@ -75,8 +75,8 @@ async function fetchRandoDetails() {
 
 async function sendEmail() {
   const email = "tresorier@randoslorraine.org";
-  const subject = "Liste des participants";
-  const body = "Voici la liste des participants...";
+  const subject = "Liste des participant.e.s";
+  const body = "Voici la liste des participant.e.s : ";
   const url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   window.location.href = url;
 }
