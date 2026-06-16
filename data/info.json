@@ -74,7 +74,7 @@
       }
     ]
   },
-    "point-tarif": {
+    "tarifs": {
     "title": "Explication des tarifs",
     "sections": [
       {
