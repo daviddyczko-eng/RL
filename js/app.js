@@ -219,6 +219,10 @@ function renderAccueil(prenom, nom) {
           <span class="home-card__title">En cas d'accident</span>
           <span class="home-card__preview"></span>
         </button>
+        <button type="button" class="home-card" data-go="tarifs">
+          <span class="home-card__title">Tout sur les tarifs</span>
+          <span class="home-card__preview"></span>
+        </button>
         <button type="button" class="home-card" data-go="lien-internet">
           <span class="home-card__title">Lien internet</span>
           <span class="home-card__preview"></span>
