@@ -21,11 +21,7 @@
           "Trash Spotter",
           "Clean 4 Green",
         ],
-          "footer": const Text(
-    "Merci à vous !",
-    style: TextStyle(
-      fontSize: 22,
-      fontWeight: FontWeight.bold,
+          "footer": "Merci à vous !",
       }
     ]
   },
