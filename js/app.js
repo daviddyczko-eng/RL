@@ -420,6 +420,16 @@ function renderInfoPage(key) {
     if (section.items) {
       html += `<ul>${section.items.map((i) => `<li>${escapeHtml(i)}</li>`).join("")}</ul>`;
     }
+    if (section.text) {
+  if (Array.isArray(section.text)) {
+    html += section.text
+      .map(t => `<p class="info-text">${escapeHtml(t)}</p>`)
+      .join("");
+  } else {
+    html += `<p class="info-text">${escapeHtml(section.text)}</p>`;
+  }
+}
+
     if (section.links) {
       html += section.links
         .map(
