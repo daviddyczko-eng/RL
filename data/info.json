@@ -56,7 +56,7 @@
           "SAMU : <a href=\"tel:15\">15</a>",
           "Sapeurs-pompiers : <a href=\"tel:18\">18</a>",
           "Alerte par SMS : <a href=\"sms:114\">114</a>",
-        ]
+        ],
         "text": [
           {
             "label": "Alerte Secours",
@@ -64,6 +64,8 @@
             "store_android": "https://play.google.com/store/apps/details?id=com.alertesecours",
             "store_ios": "https://apps.apple.com/fr/app/alerte-secours/id6708225143"
           }
+        ]
+      }
       },
       {
         "heading": "Informer :",
