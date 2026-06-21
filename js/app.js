@@ -441,7 +441,7 @@ function renderInfoPage(key) {
     html += `<section class="info-section"><h3>${escapeHtml(section.heading)}</h3>`;
 
     if (section.items) {
-      html += `<ul>${section.items.map((i) => `<li>${escapeHtml(i)}</li>`).join("")}</ul>`;
+      html += `<ul>${section.items.map((i) => `<li>${i}</li>`).join("")}</ul>`;
     }
 
     if (section.text) {
