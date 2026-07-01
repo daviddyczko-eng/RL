@@ -60,10 +60,25 @@ function renderQr(container, text, size = 100) {
 }
 
 async function fetchRandoDetails() {
-  await new Promise((r) => setTimeout(r, 400));
-  const response = await fetch("./data/rando-prochaine.json");
-  if (!response.ok) throw new Error("Données indisponibles");
-  return response.json();
+  try {
+    // Appel à ton API Netlify
+    const res = await fetch("/.netlify/functions/rando", { cache: "no-store" });
+    if (!res.ok) throw new Error("API indisponible");
+
+    const data = await res.json();
+
+    // Sauvegarde dans la mémoire du téléphone
+    localStorage.setItem("prochaineRando", JSON.stringify(data));
+
+    return data;
+
+  } catch (e) {
+    // Mode hors-ligne
+    const saved = localStorage.getItem("prochaineRando");
+    if (saved) return JSON.parse(saved);
+
+    throw new Error("Aucune donnée disponible");
+  }
 }
 
 async function sendEmail() {
